@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detailToko">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carousel"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:fillColor="#fff"
+            app:pageColor="#000"
+            app:radius="6dp"
+            app:strokeColor="#d3d3d3"
+            app:slideInterval="1500"
+            app:strokeWidth="2dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/namaToko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama toko"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@id/carousel"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/jarakToko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Km"
+            android:textSize="15sp"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@id/namaToko"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/relLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jarakToko"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/barangDicari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="nama barang"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/hargaBarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/barangDicari"
+                android:text="Rp. harga"
+                android:textSize="16sp"/>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_toRightOf="@id/barangDicari"
+                android:layout_marginLeft="125dp"
+                android:text="list barang dijual"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btnKeranjang"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/relLayout"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/keranjang_belanja"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnKeranjang"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/rateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beri bintang pada toko ini"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:rating="5"
+                android:stepSize="0.5"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:theme="@style/RatingBar"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
