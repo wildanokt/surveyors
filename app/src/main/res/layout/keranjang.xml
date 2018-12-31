@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fotoUser"
+        android:layout_toEndOf="@id/fotoUser"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/keranjang_barang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Nama Barang"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/keranjang_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Rp. harga"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lay1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Barang"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnMin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/valJumlah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="99"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

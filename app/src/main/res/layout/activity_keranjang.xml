@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_keranjang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listItem="@layout/keranjang">
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_below="@id/rv_keranjang"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/layHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total biaya : "
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp. harga"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bayar"
+            android:textSize="16sp"
+            android:layout_below="@id/layHarga"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+</ScrollView>
