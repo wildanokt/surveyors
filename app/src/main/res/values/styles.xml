@@ -13,4 +13,6 @@
         <item name="colorControlNormal">@color/gray</item>
     </style>
 
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar"/>
+
 </resources>
